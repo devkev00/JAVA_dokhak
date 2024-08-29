@@ -8,16 +8,20 @@ public class Customer {
    int bonusPoint;
    protected double bonusRatio;
 
-   public Customer() {
-       customerGrade = "SILVER";
-       bonusRatio = 0.01;
-   }
+//   public Customer() {
+//       customerGrade = "SILVER";
+//       bonusRatio = 0.01;
+//
+//       System.out.println("Customer Created");
+//   }
 
    public Customer(int customerID, String customerName) {
        this.customerID = customerID;
        this.customerName = customerName;
        this.customerGrade = "SILVER";
        bonusRatio = 0.01;
+
+       System.out.println("Customer(int, String) Created");
    }
 
    public int calcPrice(int price) {
@@ -53,4 +57,19 @@ public class Customer {
         this.customerGrade = customerGrade;
     }
 
+    public int getBonusPoint() {
+        return bonusPoint;
+    }
+
+    public void setBonusPoint(int bonusPoint) {
+        this.bonusPoint = bonusPoint;
+    }
+
+    public double getBonusRatio() {
+        return bonusRatio;
+    }
+
+    public void setBonusRatio(double bonusRatio) {
+        this.bonusRatio = bonusRatio;
+    }
 }
